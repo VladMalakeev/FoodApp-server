@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Start META -->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- TITLE -->
+		<title>FOODAPP.GQ</title>
+       
+       	<!-- Start Sheets CSS -->
+		
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="./style.css" rel="stylesheet" type="text/css"/>
+		
+	</head>
+	<body>
+   
+
+		<div id="wrap">
+            <div class="header">
+            
+            <h1 class="logo">FOODAPP.GQ</h1>
+			
+                  <input checked type="radio" name="respond" id="desktop"/>
+                  <article id="slider">
+                    <input checked type="radio" name="slider" id="switch1"/>
+                    <input  type="radio" name="slider" id="switch2"/>
+                    <input  type="radio" name="slider" id="switch3"/>
+                    <input  type="radio" name="slider" id="switch4"/>
+                    <input  type="radio" name="slider" id="switch5"/>
+                    
+                    <div id="slides">
+                        <div id="overflow">
+						<div id="link_form">
+				<a class="link_form" href="<?php echo HOST; ?>?mode=auth#form">Вход</a>
+				<a class="link_form" href="<?php echo HOST; ?>?mode=reg#form">Регистрация</a>
+			</div>
+                            <div class="image">
+                                <article> <img src="./image/img_1.jpg" /> </article>
+                                <article> <img src="./image/img_2.jpg" /> </article>
+                                <article> <img src="./image/img_3.jpg" /> </article>
+                                <article> <img src="./image/img_4.jpg" /> </article>
+                                <article> <img src="./image/img_5.jpg" /> </article>
+								
+                            </div>
+                            <div id="line"></div>
+                        </div>
+						
+                    </div>
+                   
+                    
+                    <div id="controls">
+                        <label for="switch1"></label>
+                        <label for="switch2"></label>
+                        <label for="switch3"></label>
+                        <label for="switch4"></label>
+                        <label for="switch5"></label>
+                    
+                    </div> 
+                    <div id="active">
+                        <label for="switch1"></label>
+                        <label for="switch2"></label>
+                        <label for="switch3"></label>
+                        <label for="switch4"></label>
+                        <label for="switch5"></label>
+                    </div>
+                  </article>  
+				  
+            </div>
+			
+
+			<div style="clear:both;"></div>
+            
+    <div class="info" >
+    	<h1 id="title"> Что такое FoodApp ?</h1>
+    	
+        <div class="text">
+            <h3>  
+            FoodApp.gq – это   службы доставки еды из ресторанов, кафе, онлайн-супермаркетов и магазинов . Мы даем возможность клиентам заказать еду в режиме реального времени из местных заведений через один интернет-портал.<br>
+            От пиццы, суши, бургеров, пирогов до мексиканской и индийской кухни – вы можете легко заказать еду из целого ряда ресторанов с помощью нескольких кликов. В свою очередь, foodapp помогает небольшим заведениям появиться в интернете и наладить свою технологию обработки онлайн-заказов, а более крупным брендам установить допополнительный доход.<br>
+            Наша команда ежедневно работает над развитием и совершенствованием платформы, чтобы она стала главным помощником в выборе и заказе еды на любой случай: от простых посиделок с друзьями до праздничных и шикарных банкетов.<br>
+            FoodApp – самый быстрый и эффективный способ заказать еду на дом. 
+            </h3>
+            <div id="map_android">
+                
+            </div>
+        </div>
+    	
+    </div>
+    <a name="form"></a>
+    	<div id="menu">
+				<div class="menu">
+					<ul>
+						<li><a href="<?php echo HOST; ?>?mode=auth#form">Войти</a></li>
+						<li><a href="<?php echo HOST; ?>?mode=reg#form">Регистрация</a></li>
+					</ul>
+				</div>
+			</div>
+    
+    <div id="content">
+        <?php echo $content; ?>
+    </div>
+</div>
+
+
+	</body>
+</html>

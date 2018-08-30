@@ -1,0 +1,239 @@
+.wrap_menu{
+  
+    height: 100%;
+    width:100%;
+    margin:auto;
+   display: table;
+   background-image:url(https://s1.1zoom.ru/big0/985/Pastry_Donuts_Many_White_background_525995_1280x1024.jpg);
+   background-repeat:0;
+   background-size:100%;
+   
+}
+#wrap_center{
+	margin:auto;
+	display: table;
+	padding: 50px 0;
+}
+#empty{
+    width:200px;
+    height: 300px;
+    margin-bottom:30px;
+    margin-left: 30px;
+    margin-right: 15px;
+    border:1px solid #fe6637;
+    background: rgba(255,255,255,0.6);
+    float:left;
+    display: block;
+    background-image:url("http://resto-mir.ru/admin/pictures/4010306b.jpg");
+    padding:2px;
+    border-radius:20px;
+	box-shadow: 0px 0px 10px white;
+}
+#lists_menu{
+    width:200px;
+    height: 300px;
+    margin-bottom:30px;
+    margin-left: 20px;
+    margin-right: 15px;
+	border:3px solid #85A0C9;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.9);
+    float:left;
+    display: block;
+	box-shadow: 0px 0px 10px white;
+}
+
+#lists_menu form{
+	position:absolute;
+}
+
+#empty_buttons{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    top: 180px;
+    position: relative;
+    font-size: 43px;
+    font-weight: bold;
+    text-align:center;
+    
+     text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 5px 20px;
+  margin-left:27%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #fe6637;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif; 
+  color: #fe6637;
+  transition: .2s ease-in-out;
+    
+    
+}
+
+#empty_buttons:before{
+    content: "";
+  background: linear-gradient(90deg, rgba(255,255,255,.1), rgba(255,255,255,.5));
+  height: 100px;
+	width: 45px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+    }
+#empty_buttons:hover{
+    background:rgba(255,255,45,0.5) ;
+    color: green;
+    cursor:pointer;
+
+    background: #fe6637;
+  color: #fff;
+    }
+
+    #empty_buttons:hover:before{
+        left: 150px;
+  transition: .5s ease-in-out;
+
+    }
+   
+#cols_menu{
+     width:200px;
+    height: 300px;
+    margin: 0px 50px;
+    border:1px dotted green;
+    background: rgba(255,255,255,0.8);
+    text-align: center;
+}   
+#form_wrap{
+	
+	 width:100%;
+    height: 100%;
+    background:rgba(0,0,0,0.6);
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+	z-index: 1;
+}
+#forms_menu{
+    width:500px;
+    height: 400px;
+    background:rgba(222,213,213, 0.9);
+    border: 3px groove gray;
+	border-radius:20px;
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    box-shadow:2px 2px 10px white;
+    
+} 
+#forms_menu table{
+	width:100%;
+}
+.form_label {
+	
+	padding:10px;
+	text-align:center;
+}
+.form_label p{
+	
+	background:rgba(255,251,40, 0.7);
+	border-radius:5px;
+}
+#forms_menu h3{
+	text-align: center; 
+	margin:5px;
+	padding:10px;
+	background:rgba(255,214,65,0.5);
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	color:orange;
+	font-weight:bold;
+	text-shadow:1px 1px 1px black;
+	font-size:24px;
+	
+}
+
+
+#forms_menu textarea{
+    resize: none;
+    
+}
+
+.wrap_add_menu_btn{
+    margin: 0 auto;
+    width: 250px;
+	background:white;
+}
+.add_menu_btn{
+    float: left;
+    margin: 15px 20px;
+	background:#85A0C9;
+	border-radius:5px;
+}
+
+#image_list img{
+	width:200px;
+	height:200px;
+	border-radius:30px;
+}
+#dish_name{
+	color: #fcfa68;
+	position: absolute;
+background: rgba(255,255,255,0.8);
+text-align: center;
+border-radius:30px;
+text-shadow: 0px 1px 3px black;
+padding: 5px;
+width: 170px;
+margin:1%;
+
+}
+
+#delete{
+	background: rgba(255,255,255,0.8);
+	color:#e30e38;
+	font-weight:bold;
+	border-radius:50%;
+	margin:5px;
+	padding:2px;
+	float:right;
+	width:25px;
+	height:25px;
+	z-index:1;
+	position: relative;
+	box-shadow: 0px 0px 3px black;
+	left: 165px;
+	text-align:center;
+}
+#delete:hover{
+	background:#FF4500;
+	color:white;
+	cursor:pointer;
+	box-shadow: 0px 0px 5px blue;
+}
+#error{
+	position: absolute;
+left: 50%;
+top: 80%;
+background: #00EE76;
+padding: 10px;
+width: 300px;
+transform: translate(-50%, -40%);
+border: 2px solid #00FF7F;
+text-align: center;
+color: white;
+font-weight: bold;
+border-radius: 20px;
+
+}
+#error li{
+	padding:2px;
+}
+#background{
+	background:rgba(0,0,0,0.4);
+	height: 100%;
+}

@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Личный кабинет</title>
+	<link href="./user/menu/style.css" rel="stylesheet" type="text/css"/>							<!-- стили каталога меню -->
+	<link href="./user/orders/style.css" rel="stylesheet" type="text/css"/>							<!-- стили таблицы заказов -->
+	<link href="./user/contacts/style_about.css" rel="stylesheet" type="text/css"/>					<!-- стили контактов -->
+	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">							<!-- маленькая иконка -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>		<!-- AJAX библиотека -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="user/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="user/css/style.css">
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+	<!-- Scripts -->
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="user/sitebar/js/menu_toggle.js"></script>
+</head>
+<body>
+	<!-- Start sidebar -->
+	<i class="fa fa-bars toggle_menu"></i>
+
+	<div class="sidebar_menu">
+		<i class="fa fa-times"></i>
+		<center>
+			<h1 class="boxed_item"><?php echo $data['name']; ?></h1>
+			
+		</center>
+
+		<ul class="navigation_section">
+
+			<li class="navigation_item"> <a href="/">КАРТА</a></li>
+			<li class="navigation_item"> <a href="/menu">НАШЕ МЕНЮ</a></li>
+			<li class="navigation_item"><a href="/orders">НОВЫЕ ЗАКАЗЫ (<span id="js_new" style="color:#50fcea;font-weight:bold"></span>)</a></li>
+			<li class="navigation_item"> <a href="/progress">ЗАКАЗЫ В ОБРАБОТКЕ (<span id="js_confirm" style="color:#50fcea;font-weight:bold"></span>)</a></li>
+			<li class="navigation_item"> <a href="/history">ИСТОРИЯ</a></li>
+			<li class="navigation_item" ><a href="/contacts">КОНТАКТЫ</a></li>
+		</ul>
+
+		<center>
+			<a href="?mode=auth&exit=true">
+			<h1 class="boxed_item boxed_item_smaller signup">
+				<i class="fa fa-user"></i>
+				EXIT
+			</h1></a>
+		</center>
+	</div>
+	<!-- End of sidebar -->
+
+	<!-- подгрузка вкладок -->
+	<div id="main" >
+             <?php 
+            switch($link){
+					case '/': 
+								include('user/map/map.js');
+								
+								break;
+					case '/menu':
+								include('user/menu/menu.html');
+								break;     
+					case '/orders':
+								include('user/orders/orders.html');
+								
+								break;  
+					case '/contacts':
+								include('user/contacts/contacts.html');
+								break;  
+					case '/progress':
+								include('user/progress/progress.html');
+								break;                                 
+					case '/history':
+								include('user/history/history.html');
+								break;  
+					default: echo 'error';        
+             }
+           
+              ?>
+   
+	<script src="user/sitebar/js/close_menu.js"></script> <!-- динамика сайтбара -->
+	<script src="user/menu/menu.js" type="text/javascript"></script>    <!-- динамика католога меню --> 
+	<!-- подключение google API -->	
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHtvAIT0EHTWaBSWZDkJwr06imjJxPpsE&callback=initMap"></script>
+    <script>
+	var link = '<? echo $link ?>';
+     if(link!='/'){
+	 $(document).ready(function(){ 
+            show();   
+            setInterval(show,5000);   
+       }); 
+	   
+		
+		
+	    function show()   
+        {   
+            $.ajax({   
+                url: "functions/form_orders.php",  
+				dataType: 'json',				
+                cache: false, 
+				type:'POST',
+				data:{newdata:'true'},
+                success: function(data){ 
+				
+				document.getElementById('js_new').innerHTML = data.new_order.count;   
+				document.getElementById('js_confirm').innerHTML = data.confirmed.count;
+				}
+			});
+		}
+	 }
+	 
+	</script>	
+
+</body>
+</html>

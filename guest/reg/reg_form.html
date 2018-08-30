@@ -1,0 +1,37 @@
+<h2>Регистрация пользователя</h2>
+<div id="form_reg">
+	<form action="" method="POST">
+		<table class="t_auth">
+            <tr>
+				<td>Название вашей забигаловки<font color="red">*</font></td>
+				<td><input type="text" size="50" maxlength="30" placeholder="лазанька" name="name" value="<?php if(isset($_COOKIE['name'])) echo $_COOKIE['name']; ?>"/></td>
+			</tr>
+			<tr>
+				<td>E-mail <font color="red">*</font></td>
+				<td><input type="text" size="50" maxlength="30" placeholder="exemple@test.com" name="email" value="<?php if(isset($_COOKIE['email'])) echo $_COOKIE['email']; ?>"/></td>
+			</tr>
+			<tr>
+				<td>Пароль <font color="red">*</font></td>
+				<td><input type="password" size="50" maxlength="20" placeholder="password" name="pass"/></td>
+			</tr>
+			<tr>
+				<td>Подтверждение пароля <font color="red">*</font></td>
+				<td><input type="password" size="50" maxlength="20" placeholder="password" name="pass2"/></td>
+			</tr>
+            
+			<tr>
+				<td>&nbsp;</td>
+				<td colspan="2"><input class="btn" type="submit" value="Зарегистроваться" name="submit"></td>
+			</tr>
+		</table>
+	</form>
+<br />
+<div style="background: rgba(255,255,255,0.7);
+    padding: 10px;
+    border-radius: 5px;
+    
+    margin:10px 10px;">
+<p>Поля со значком <font color="red">*</font> обязательны для заполнения </p>
+<p><strong>Внимание!</strong> Для полноценной проверки системы регистрации Вам нужно указать действующий <strong>e-mail</strong> т.к. на него будет выслано письмо с кодом активации!</p>
+</div>
+</div>

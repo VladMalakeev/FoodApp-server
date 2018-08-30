@@ -1,0 +1,76 @@
+<!--
+Подключение "Наше меню"
+--> 
+
+<div class="wrap_menu">
+<div id="background">
+ <div id="wrap_center">
+    <div id="empty">
+        <h3 style="text-align: center;color: orange;">Добавить блюдо</h3>
+        <div id="empty_buttons" >+</div>
+		
+    </div>
+
+    <?php
+        
+        $menuName='menu_'.$_SESSION['name'];
+        $sql="SELECT * FROM $menuName ";
+        $result = $db->query($sql);
+   
+       if(!empty($result)){
+        while($row=$result->fetch(PDO::FETCH_ASSOC)){  
+    ?>
+    <div id="lists_menu">
+	     <form action="/menu" method="POST">
+		 <button class="fa fa-times" id="delete" type="submit" name="delete" value="<?php echo $row['id'] ?>"></button>
+		 </form>
+		 <h3 id="dish_name"><?php echo $row['name']; ?></h3>
+		<div id="image_list"><img src="<?php echo $row['photo'] ?>"/></div>
+        <p>  Cостав: <?php echo $row['descript']; ?></p>
+        <p>  Цена: <?php echo $row['price']; ?></p>
+		
+    </div>
+    
+    <?php
+        }
+    }
+    else { echo 'список пуст';}
+    ?>
+</div>
+    
+    
+    <div id="form_wrap">
+		<div id="forms_menu">
+		<h3>Добавьте своё блюдо</h3>
+			<form action="" method="post" name="addMenu" enctype="multipart/form-data">
+			  <table>
+					<tr>
+					   <td class="form_label"><p>Название блюда</p></td> 
+					   <td class="form_text"><input type="text" name="nameMenu" placeholder="Борщ" maxlength="40" size="50"/></td>
+					</tr>
+					
+					<tr>
+					   <td class="form_label"><p>Состав блюда</p></td> 
+					   <td class="form_text"><textarea name="descryptMenu" placeholder="1.Картошка 2.Свекла 3.Мясо" rows="5" cols="38" maxlength="150" ></textarea></td>
+					</tr>
+					
+					<tr>
+					   <td class="form_label" placeholder="16 грн" ><p>Цена</p></td> 
+					   <td class="form_text"><input type="text" name="priceMenu" placeholder="10" maxlength="5" size="5" /></td>
+					</tr>
+					
+					 <tr>
+                <td>Выбрать картинку</td>
+                <td id="file"><input type="file" name="picture"  /></td>
+                </tr>
+			  </table>
+			  <div class="wrap_add_menu_btn">
+			  <div class="add_menu_btn"><input id="ok" type="submit" name="submitMenu" value="Сохранить"/></div>
+			  <div class="add_menu_btn"> <button id="no">Отмена</button></div>
+			  </div>
+			</form>
+			
+		</div>
+	</div>
+    </div>
+</div>

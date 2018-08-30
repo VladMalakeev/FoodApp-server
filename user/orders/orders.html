@@ -1,0 +1,86 @@
+
+<div id="orders" class="wrap_orders">
+<?php
+if($count_active > 0){
+?>
+<table class="orders">
+<tr>
+<th>id заказчика</th>
+<th>блюдо</th>
+<th>количество</th>
+<th>сумма заказа</th>
+<th>время заказа</th>
+<th colspan="2">действия</th></th>
+</tr>
+<?php
+    for($i=0; $i<$count_active;$i++){
+          
+?>
+
+<tr >
+<td> 
+                    <?php 
+                            echo $active_orders[$i]["id"];
+                    ?>
+</td>
+
+<td>
+                <?php
+                        
+                        $dish_name = $active_orders[$i]["dish"];
+                        $tmp=$db->query("select name from $menu_owners where id = $dish_name");
+                        $print_name=$tmp->fetch(PDO::FETCH_LAZY);
+                        echo $print_name['name'];
+                ?>
+
+</td>
+
+<td>
+<?php
+echo $active_orders[$i]["count"];
+?>
+</td>
+
+<td>
+<?php
+echo $active_orders[$i]["price"];
+?>
+</td>
+
+<td>
+<?php
+echo date('d.m.Y - H:i:s',$active_orders[$i]["time"]);
+?>
+</td>
+
+<td>
+<form action="/orders" method="POST">
+<button class="accept"  name="accept" value="<?php echo $active_orders[$i]['num']; ?>">принять</button>
+</form>
+</td>
+<td>
+<form action="/orders" method="POST">
+<button class="reject" name="reject" value="<?php echo $active_orders[$i]['num'];?>">отклонить</button>
+</form>
+</td>
+
+</tr>
+
+<?php
+}
+?>
+</table>
+<?php
+}
+else{
+?>
+<div id="empty_tab">
+<p>У вас пока нет заказов):</p>
+</div>
+<?php
+}
+?>
+
+
+
+</div>

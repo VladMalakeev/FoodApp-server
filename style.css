@@ -1,0 +1,373 @@
+﻿body
+      {
+          background-image: url("image/bg.jpg");
+          background-size: 100%;
+          background-size: cover;
+      }
+#wrap {
+	min-width: 800px;
+    max-width: 1400px;
+	height:100%;
+	margin:50px auto;
+	 background: rgba(226,83,58,0.1);
+    border: 2px solid black;
+    border-radius: 20px;
+	display:block;
+}
+
+#menu{
+	width: 175px;
+margin: 48px auto;
+height: 48px;
+padding: 1px;
+border: 2px solid black;
+background: rgba(0,0,0,0.5);
+
+}
+
+#content {
+	width: 800px;
+	
+	margin:0 auto;
+	/*outline:1px solid lime;*/
+	
+}
+#form_auth
+{
+  width: 300px;
+margin: 10px auto;
+  
+}
+#form_reg
+{
+  width: 540px;
+margin: 10px auto;
+  
+}
+
+
+.menu{
+	width: 179px;
+	background-color: #333;
+	margin:0 auto;
+}
+	
+.menu ul{
+	margin: 0; padding: 0;
+	float: left;
+    border: 1px solid white;
+}
+		 
+.menu ul li{
+	display: inline;
+}
+			 
+.menu ul li a{
+	float: left; text-decoration: none;
+	color: white; 
+	padding: 10.5px 11px;
+	background-color: #333; 
+}
+			 
+.menu ul li a:visited{
+	color: white;
+}
+			 
+.menu ul li a:hover, .menu ul li .current{
+	color: #fff;
+	background-color:#0b75b2;
+}
+
+h3{
+    text-align: center;
+    
+}
+#stripe{
+      background: rgba(255,255,255,0.5);
+}  
+.logo
+   {
+      text-align: center; 
+       padding: 20px;
+       background: rgba(255,255,255,0.7);
+       width: 500px;
+       margin: auto;
+       border-bottom-left-radius: 20px;
+       border-bottom-right-radius: 20px;
+       color: black;  
+       position: absolute;
+       z-index: 1; 
+       left: 50%;
+       transform: translate(-50%);
+	   border-bottom:2px solid #bbb;
+	   border-left:2px solid #bbb;
+	   border-right:2px solid #bbb;
+	   text-shadow:1px 2px 5px #FFFFB2;
+   }
+#link_form{
+position: absolute;
+z-index: 1;
+left: 83%;
+top:4px;
+
+	
+} 
+
+  
+ .link_form{
+	text-decoration:none;
+	background:wheat;
+	padding:5px;
+	color:#808581;
+	border-bottom:1px solid #D59D89;
+	border-left:1px solid #D59D89;
+	border-right:1px solid #D59D89;
+	border-radius:8px;
+	text-decoration: none;
+} 
+ .link_form:hover{
+color:#F6A055;
+ } 
+      h2
+   {
+	   border-radius: 10px;
+      text-align: center;  
+       background: rgba(255,255,255,0.6);
+       margin: 10px 50px;
+       border-top: 2px solid #64B4FF;
+        border-bottom: 2px solid #64B4FF;
+		
+   }
+   
+
+
+.t_auth
+{
+    background: rgba(0,0,0,0.4);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.t_auth td
+{
+  color: #4D394B;
+  font-weight: bold;
+  padding:10px;
+    
+}
+
+.t_auth input
+{
+ border: 1px solid black;  
+ text-align: center; 
+ border-radius: 10px;
+}
+
+.t_auth input:hover
+{
+ border: 1px solid #78E2FF;   
+}
+
+.btn
+{
+    padding: 5px 15px;
+    background: #A5E2FF;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+}
+.btn:hover
+{
+    background: #029e98;
+     border: 1px solid black; 
+}
+
+
+.info{
+  background: #4d394b;
+  font-family: 'Indie Flower', cursive;
+font-family: 'Saira Extra Condensed', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Lobster', cursive;
+padding: 20px;
+border-bottom: 4px groove black;
+
+}
+
+#title{
+    text-align: center;
+    color: yellow;
+    width: 500px;
+    margin: auto;
+    border-top: 4px groove orange;
+    border-bottom: 4px groove orange;
+    padding: 5px;
+    text-shadow: 1px 2px 2px black;
+}
+.text{
+  color:#FF9 ;
+  margin:20px 80px;
+}
+#map_android{
+    width: 650px;
+    height: 380px;
+    margin: 20px auto;
+    border-radius: 99%;
+    background: url('./image/gps.png');
+}
+
+
+.header{
+   
+    padding:0 0 20px 0;
+    border-bottom: 4px groove black;
+}
+/* стили слайдера */
+#slider{
+    position:relative;
+    text-align: center;
+    
+    margin:0 auto;
+}
+
+#slides article{
+    width: 20%;
+    float:left;
+}
+
+#slides .image{
+    width: 500%;
+    line-height:0;
+}
+
+#overflow{
+    width: 100%;
+    overflow: hidden;
+}
+
+article img{
+    width:100%;
+}
+
+#desktop:checked ~ #slider{
+    max-width: 960px;
+	 nin-width: 900px;
+}
+
+#switch1:checked ~ #controls label:nth-child(5),
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2),
+#switch4:checked ~ #controls label:nth-child(3),
+#switch5:checked ~ #controls label:nth-child(4){
+    background: url('./image/left.png') no-repeat;
+    float:left;
+    margin: 0 0 0 -84px;
+    display: block;
+    height: 68px;
+    width: 68px;
+    background-size: cover;
+}
+
+#switch1:checked ~ #controls label:nth-child(2),
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(4),
+#switch4:checked ~ #controls label:nth-child(5),
+#switch5:checked ~ #controls label:nth-child(1){
+    background: url('./image/right.png') no-repeat;
+    float:right;
+    margin: 0 -84px 0 0px;
+    display: block;
+    height: 68px;
+    width: 68px;
+    background-size: cover;
+}
+
+label, a{
+    cursor: pointer;
+}
+
+.header input{
+    display: none;
+}
+
+#switch1:checked ~ #slides .image{
+    margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+    margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+    margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image{
+    margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image{
+    margin-left: -400%;
+}
+
+#controls{
+    margin: -25% 0 0 0;
+    width: 100%;
+    height: 50px;
+}
+
+#active label{
+    border-radius: 10px;
+    display: inline-block;
+    width: 15px;
+    height:15px;
+    background: #bbb;
+}
+
+#active{
+    margin: 16% 0 0 ;
+    text-align: center;
+	    position: relative;
+}
+}
+
+#active label:hover{
+    background: #76c8ff;
+    border-color: #777 !important;
+	box-shadow: 2px 2px 2px black;
+}
+
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4),
+#switch5:checked ~ #active label:nth-child(5){
+    background: #18a3dd;
+    border-color: #18a3dd !important;
+	box-shadow: 2px 2px 2px black;
+}
+#slides{
+	border-left: 4px groove #bbb;
+border-right: 4px groove #bbb;
+}
+#slides .image{
+  transform: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);  
+}
+
+#controls label:hover{
+    opacity:0.6;
+}
+#controls label{
+    transition: opacity 0.2s ease-out;
+}
+
+#line{
+	height: 60px;
+background: rgba(255,255,255,0.4);
+position: relative;
+vertical-align: bottom;
+top: 335px;
+}
+
+
